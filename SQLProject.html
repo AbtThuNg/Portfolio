@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project Details</title>
+</head>
+<body>
+	<h1>Data Cleansing in SQL &  Tableau Dashboard</h1>
+
+    <h3>1. Context</h3>
+<p>A Sales Manager wants to improve the Sales reports, the idea is an interactive dashboard, which could be updated at least once per day. In addition, he also wants to support Store Managers and Sales representatives to follow their tasks better. The report is for the past 6 months.</p>
+
+<h3>2.Business Demand</h3>
+<p><strong>- Value of changes:</strong> Visual dashboards, improved Sales reports</p>
+<p><strong>- Tools:</strong> SQL, Tableau</p>
+
+<h3>3. Who uses these reports:</h3>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+    }
+</style>
+
+<table>
+    <tr>
+        <th>No.</th>
+        <th>Role</th>
+        <th>Demand</th>
+        <th>So that I (user value)</th>
+        <th>Acceptance Criteria</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Sales Manager</td>
+        <td>To have a visual dashboard of sales</td>
+        <td>To better track which stores have the best sales and which products are selling the most.</td>
+        <td>A Tableau dashboard that allows filtering of data to show stores with the highest sales and the best-selling products by each store.</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Store manager</td>
+        <td>A comprehensive overview of sales per product and per staff</td>
+        <td>To monitor staff performance and identify popular products sold by staff members. This helps with stock allocation and training plans.</td>
+        <td>A Tableau dashboard that enables filtering of data by store and staff.</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Sales representative</td>
+        <td>A detailed view of sales per product and per customer</td>
+        <td>To track customers with the highest purchases and identify popular products among customers.</td>
+        <td>A Tableau dashboard that allows filtering of data by product and customer.</td>
+    </tr>
+</table>
+
+<h3>4. Data Cleansing & Transformation</h3>
+<p>Below are SQL statements for cleansing & Transformation of necessary data that are requested by the Sales Manager.</p>
+<div style="margin-bottom: 40px;">
+    <a href="#" class="image fit">
+      <img src="images/Sales.png" alt="" width="300" height="250" />
+    </a>
+  </div>
+  
+  <div style="margin-bottom: 40px;">
+    <a href="#" class="image fit">
+      <img src="images/CS.png" alt="" width="400" height="270" />
+    </a>
+  </div>
+  
+  <div style="margin-bottom: 40px;">
+    <a href="#" class="image fit">
+      <img src="images/S1.png" alt="" width="300" height="150" />
+    </a>
+  </div>
+  
+  <div style="margin-bottom: 40px;">
+    <a href="#" class="image fit">
+      <img src="images/S2.png" alt="" width="300" height="150" />
+    </a>
+  </div>
+  
+  <div style="margin-bottom: 40px;">
+    <a href="#" class="image fit">
+      <img src="images/S3.png" alt="" width="300" height="150" />
+    </a>
+  </div>
+  
+  <div style="margin-bottom: 40px;">
+    <a href="#" class="image fit">
+      <img src="images/S4.png" alt="" width="300" height="150" />
+    </a>
+  </div>
+
+  <style>
+    /* Styles for the 3D button */
+    .button-3d {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+  
+    .button-3d:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+  
+  <ul class="actions special">
+    <li>
+      <a href="https://public.tableau.com/app/profile/thu1336/viz/SalesAnalyticsaFashionretailcompany/Dashboard1?publish=yes" class="button button-3d">View Dashboard</a>
+    </li>
+  </ul>
+  
+  
+  </body>
+</html>
