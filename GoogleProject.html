@@ -16,59 +16,28 @@ Collecting data on activity, sleep, stress, and reproductive health has allowed 
 By using discovered trends to support guiding future marketing strategies. These findings and the high-level recommendations will help to unlock new growth opportunities for the company, and are presented to the Bellabeat executive team.</p>
 
     <h3>3. Analysis Introduction</h3>
-<p>The phases of answering this work followed Google’s six Data Analysis steps: <b> Ask, Prepare, Process, Analyze, Share, and Act.</b></p>
-
-    <h4>Step 1 - ASK </h4>
-<p> There are two key tasks in this phase:
-<ul>
-<li>- Identify the business task</li>
-<li>- Consider key stakeholders</li>
-And these lead one deliverable: a clear statement of the business task.</ul><p/>
+<p> To analyze this project, I use  <b>Google Big Query <b/> and <b>Tableau</b> to clean, transform and visualize data insights that I gained. </p>
+<p> Data source: <a href="https://www.kaggle.com/datasets/arashnic/fitbit" </a></p>
+<p> <b>Some Notes: <b/></p>
+<li> 
+<b>Upload files:<b/> Some issues when uploading data to Google Big Query. <b>The error message:</b> <i>Could not parse ‘4/12/2016 12:00:00AM’ as TIMESTAMP for field ActivityHour (position 1) starting at location 27 with message ‘Invalid time zone:AM’.</i>
+The solution is to uncheck <b>Auto-detect Schema</b>, and choose Edit as text with the following query (example for steps_hours.csv file) and in Advanced options, type 1 at Header Rows to Skip. Repeat the same steps with other files.
+ </li>
+<img src="images/Sales.png" alt="" width="300" height="250" />
 	
-	
-<table border="2">
-    <tr>
-        <td><strong>Identify the business task</strong></td>
-        <td>
-            <ul>
-                <li>To gain insight into trends of how consumers use non-Bellabeat smart devices.</li>
-                <li>How to apply discovered trends to Bellabeat customers as well as to support guiding future marketing strategies.</li>
-            </ul>
-        </td>
-    </tr>
-
-    <tr>
-        <td><strong>Consider key stakeholders</strong></td>
-        <td>
-            <ul>
-                <li>The Executive team (Urška Sršen and Sando Mur)</li>
-                <li>Marketing analytics team</li>
-                <li>Customers</li>
-            </ul>
-        </td>
-    </tr>
-
-    <tr>
-        <td><strong>Deliverable</strong></td>
-        <td>
-            The analyst has been asked to gain insights into trends of how consumers use non-Bellabeat smart devices, and how to apply discovered trends to one Bellabeat’s products as well as applying it to customers to support guiding future marketing strategies.
-            <p>These findings and the top high-level recommendations are reported to the Bellabeat executive team.</p>
-        </td>
-    </tr>
-</table>
-
- <h4>Step 2 - PREPARE </h4>
-<p> At this phase, there are four key tasks:
-<ul>
-<li> Download data and store it appropriately.</li>
-<li> Identify how it’s organized.</li>
-<li> Sort and filter the data.</li>
-<li>Determine the credibility of the data.</li>
-And these lead one <b>deliverable</b>: a description of all data sources used.</ul>
- <p/>
-
-
-
+<li> <b>Checking Data consistency:</b> <li/>
+	<ul>
+	<li>METs_minitues	: 33 unique users</li>
+	<li>activities_day	: 33 unique users</li>
+	<li>calories_hours	: 33 unique users</li>
+	<li>heartrate_seconds	: 14 unique users</li>
+	<li>intensities_hours	: 33 unique users</li>
+	<li>sleeps_day		: 24 unique users</li>
+	<li>steps_hours		: 33 unique users</li>
+	<li>weight_day		: 8 unique users</li>
+	</ul>
+<i>From the results, there are 24 unique users in the sleeps_day dataset, 14 unique users in heartrate_seconds dataset and only 8 unique users in weight_day, while other datasets are 33 unique users. Hence, with only 8 & 14 unique users, sleeps_day & heartrate_seconds are not significant to gain insights.
+</i>
 
 
 	
