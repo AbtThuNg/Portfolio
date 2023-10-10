@@ -17,7 +17,7 @@ By using discovered trends to support guiding future marketing strategies. These
 
  <h3>3. Analysis Introduction</h3>
 <p>To analyze this project, I use <b>Google BigQuery</b> and <b>Tableau</b> to clean, transform, and visualize data insights that I gained.</p>
-<p>Data source: <a href="https://www.kaggle.com/datasets/arashnic/fitbit"> Fitbit Dataset </a></p>
+<p>Data source: <a href="https://www.kaggle.com/datasets/arashnic/fitbit">Fitbit Dataset</a></p>
 <p><b>(*) Some Notes:</b></p>
 <ul>
     <li>
@@ -39,30 +39,33 @@ By using discovered trends to support guiding future marketing strategies. These
             <li>steps_hours: 33 unique users</li>
             <li>weight_day: 8 unique users</li>
         </ul>
-        <i>From the results, there are 24 unique users in the sleeps_day dataset, 14 unique users in the heartrate_seconds dataset, and only 8 unique users in the weight_day dataset, while other datasets have 33 unique users. Hence, with only 8 & 14 unique users, sleeps_day & heartrate_seconds are not significant to gain insights.</i>
-
-	 <li>
-	<b>Checking for NULL Values in all columns:</b>To make sure there is no null value for next analysis, we run this code (<i>Apply for all datasets that are related to the analysis</i>:
-	<ul>
-	<img src="images/3.png" alt="" width="500" height="3500" />
-		
+        <p><i>From the results, there are 24 unique users in the sleeps_day dataset, 14 unique users in the heartrate_seconds dataset, and only 8 unique users in the weight_day dataset, while other datasets have 33 unique users. Hence, with only 8 & 14 unique users, sleeps_day & heartrate_seconds are not significant to gain insights.</i></p>
+    </li>
+</ul>
+<ul>
+    <li>
+        <b>Checking for NULL Values in all columns:</b> To make sure there is no null value for next analysis, we run this code (<i>Apply for all datasets that are related to the analysis</i>):
+        <ul>
+            <img src="images/3.png" alt="" width="500" height="350" />
+        </ul>
     </li>
 </ul>
 
 <h3>4. Process Phase - Google BigQuery</h3>
 <ul>
     <li><b>Activities_day</b> dataset</li>
-<ul>
-    <li>According to the reference from this article <a href="https://www.10000steps.org.au/articles/healthy-lifestyles/counting-steps/">(source:10000steps)</a>, we classify the users as follows:</li>
     <ul>
-        <li>- Sedentary: Less than 5000 steps a day.</li>
-        <li>- Low active: Between 5000 and 9999 steps a day.</li>
-        <li>- Fairly active: Between 10000 and 12500 steps a day.</li>
-        <li>- Very active: More than 12500 steps a day.</li>
+        <li>According to the reference from this article <a href="https://www.10000steps.org.au/articles/healthy-lifestyles/counting-steps/">(source: 10000steps)</a>, we classify the users as follows:</li>
+        <ul>
+            <li>- Sedentary: Less than 5000 steps a day.</li>
+            <li>- Low active: Between 5000 and 9999 steps a day.</li>
+            <li>- Fairly active: Between 10000 and 12500 steps a day.</li>
+            <li>- Very active: More than 12500 steps a day.</li>
+        </ul>
+        <li>While other datasets have the date format ddmmyy, the activities_day has the yymmdd format, and we also insert the day_of_week column and week number.</li>
     </ul>
-    <li>While other datasets have the date format ddmmyy, the activities_day has the yymmdd format, and we also insert the day_of_week column and week number.</li>
+    <img src="images/2.png" alt="" width="1000" height="800" />
 </ul>
-<img src="images/2.png" alt="" width="1000" height= "800" />
 
 
 <h3>3. Who uses these reports:</h3>
