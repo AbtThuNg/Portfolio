@@ -15,44 +15,50 @@ Collecting data on activity, sleep, stress, and reproductive health has allowed 
 <p> As a data analyst, you have been asked to analyze smart devices in order to gain insight into trends of how consumers use non-Bellabeat smart devices.   
 By using discovered trends to support guiding future marketing strategies. These findings and the high-level recommendations will help to unlock new growth opportunities for the company, and are presented to the Bellabeat executive team.</p>
 
-   <h3>3. Analysis Introduction</h3>
-<p> To analyze this project, I use  <b>Google BigQuery <b/> and <b>Tableau</b> to clean, transform and visualize data insights that I gained. </p>
-<p> Data source: <a href="https://www.kaggle.com/datasets/arashnic/fitbit" </a></p>
-<p> <b> (*)Some Notes: <b/></p>
-<li> 
-<b>Upload files:<b/> Some issues when uploading data to Google BigQuery. <b>The error message:</b> <i>Could not parse ‘4/12/2016 12:00:00AM’ as TIMESTAMP for field ActivityHour (position 1) starting at location 27 with message ‘Invalid time zone:AM’.</i>
-The solution is to uncheck <b>Auto-detect Schema</b>, and choose Edit as text with the following query (example for steps_hours.csv file) and in Advanced options, type 1 at Header Rows to Skip. Repeat the same steps with other files.
-</li>
-	
-  <img src="images/13.png" alt="" width="300" height="250" />
-	
-<li> <b>Checking Data consistency:</b> <li/>
-	<ul>
-	<li>METs_minitues	: 33 unique users</li>
-	<li>activities_day	: 33 unique users</li>
-	<li>calories_hours	: 33 unique users</li>
-	<li>heartrate_seconds	: 14 unique users</li>
-	<li>intensities_hours	: 33 unique users</li>
-	<li>sleeps_day		: 24 unique users</li>
-	<li>steps_hours		: 33 unique users</li>
-	<li>weight_day		: 8 unique users</li>
-	
-<i>From the results, there are 24 unique users in the sleeps_day dataset, 14 unique users in heartrate_seconds dataset and only 8 unique users in weight_day, while other datasets are 33 unique users. Hence, with only 8 & 14 unique users, sleeps_day & heartrate_seconds are not significant to gain insights.
-</i> </ul>
+ <h3>3. Analysis Introduction</h3>
+<p>To analyze this project, I use <b>Google BigQuery</b> and <b>Tableau</b> to clean, transform, and visualize data insights that I gained.</p>
+<p>Data source: <a href="https://www.kaggle.com/datasets/arashnic/fitbit">Fitbit Dataset</a></p>
+<p><b>(*) Some Notes:</b></p>
+<ul>
+    <li>
+        <b>Upload files:</b> Some issues when uploading data to Google BigQuery. The error message: <i>Could not parse ‘4/12/2016 12:00:00AM’ as TIMESTAMP for field ActivityHour (position 1) starting at location 27 with message ‘Invalid time zone: AM’.</i>
+        The solution is to uncheck <b>Auto-detect Schema</b>, and choose Edit as text with the following query (example for steps_hours.csv file) and in Advanced options, type 1 at Header Rows to Skip. Repeat the same steps with other files.
+    </li>
+</ul>
+<img src="images/13.png" alt="" width="300" height="250" />
+<ul>
+    <li>
+        <b>Checking Data consistency:</b>
+        <ul>
+            <li>METs_minutes: 33 unique users</li>
+            <li>activities_day: 33 unique users</li>
+            <li>calories_hours: 33 unique users</li>
+            <li>heartrate_seconds: 14 unique users</li>
+            <li>intensities_hours: 33 unique users</li>
+            <li>sleeps_day: 24 unique users</li>
+            <li>steps_hours: 33 unique users</li>
+            <li>weight_day: 8 unique users</li>
+        </ul>
+        <i>From the results, there are 24 unique users in the sleeps_day dataset, 14 unique users in the heartrate_seconds dataset, and only 8 unique users in the weight_day dataset, while other datasets have 33 unique users. Hence, with only 8 & 14 unique users, sleeps_day & heartrate_seconds are not significant to gain insights.</i>
+    </li>
+</ul>
 
 <h3>4. Process Phase - Google BigQuery</h3>
+<ul>
+    <li><b>Activities_day</b> dataset</li>
+</ul>
+<ul>
+    <li>According to the reference from this article <a href="https://www.10000steps.org.au/articles/healthy-lifestyles/counting-steps/">(source)</a>, we classify the users as follows:</li>
+    <ul>
+        <li>- Sedentary: Less than 5000 steps a day.</li>
+        <li>- Low active: Between 5000 and 9999 steps a day.</li>
+        <li>- Fairly active: Between 10000 and 12500 steps a day.</li>
+        <li>- Very active: More than 12500 steps a day.</li>
+    </ul>
+    <li>While other datasets have the date format ddmmyy, the activities_day has the yymmdd format, and we also insert the day_of_week column and week number.</li>
+</ul>
+<img src="images/2.png" alt="" width="300" height="250" />
 
-<ul> <li> <b>Activities_day</b> dataset</li></ul>
-	<ul>
-<p> <li>According to the reference from this article <a href = "https://www.10000steps.org.au/articles/healthy-lifestyles/counting-steps/"</a> , we classify the users as below:</li></p>
-<p> - Sedentary - Less than 5000 steps a day.</p>
-<p> - Low active - Between 5000 and 9999 steps a day.</p>
-<p> - Fairly active - Between 10000 and 12500 steps a day.</p>
-<p> - Very active - More than 12500 steps a day.</p>
-
-<li>While other datasets have date format ddmmyy, the activities_day has yymmdd format, and we also insert the day_of_week column, week number.</li>
-	</ul>
-  <img src="images/2.png" alt="" width="300" height="250" />
 
 <h3>3. Who uses these reports:</h3>
 <style>
