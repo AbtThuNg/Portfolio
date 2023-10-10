@@ -16,28 +16,29 @@ Collecting data on activity, sleep, stress, and reproductive health has allowed 
 By using discovered trends to support guiding future marketing strategies. These findings and the high-level recommendations will help to unlock new growth opportunities for the company, and are presented to the Bellabeat executive team.</p>
 
     <h3>3. Analysis Introduction</h3>
-<p> To analyze this project, I use  <b>Google Big Query <b/> and <b>Tableau</b> to clean, transform and visualize data insights that I gained. </p>
-<p> Data source: <a href="https://www.kaggle.com/datasets/arashnic/fitbit" </a></p>
-<p> <b>Some Notes: <b/></p>
-<li> 
-<b>Upload files:<b/> Some issues when uploading data to Google Big Query. <b>The error message:</b> <i>Could not parse ‘4/12/2016 12:00:00AM’ as TIMESTAMP for field ActivityHour (position 1) starting at location 27 with message ‘Invalid time zone:AM’.</i>
-The solution is to uncheck <b>Auto-detect Schema</b>, and choose Edit as text with the following query (example for steps_hours.csv file) and in Advanced options, type 1 at Header Rows to Skip. Repeat the same steps with other files.
- </li>
-<img src="images/Sales.png" alt="" width="300" height="250" />
-	
-<li> <b>Checking Data consistency:</b> <li/>
-	<ul>
-	<li>METs_minitues	: 33 unique users</li>
-	<li>activities_day	: 33 unique users</li>
-	<li>calories_hours	: 33 unique users</li>
-	<li>heartrate_seconds	: 14 unique users</li>
-	<li>intensities_hours	: 33 unique users</li>
-	<li>sleeps_day		: 24 unique users</li>
-	<li>steps_hours		: 33 unique users</li>
-	<li>weight_day		: 8 unique users</li>
-	</ul>
-<i>From the results, there are 24 unique users in the sleeps_day dataset, 14 unique users in heartrate_seconds dataset and only 8 unique users in weight_day, while other datasets are 33 unique users. Hence, with only 8 & 14 unique users, sleeps_day & heartrate_seconds are not significant to gain insights.
-</i>
+<p>To analyze this project, I used <b>Google Big Query</b> and <b>Tableau</b> to clean, transform, and visualize data insights that I gained.</p>
+<p>Data source: <a href="https://www.kaggle.com/datasets/arashnic/fitbit">Fitbit Dataset</a></p>
+<p><b>Some Notes:</b></p>
+<ul>
+    <li><b>Upload files:</b> I encountered some issues when uploading data to Google Big Query. The error message was: "<i>Could not parse '4/12/2016 12:00:00AM' as TIMESTAMP for field ActivityHour (position 1) starting at location 27 with the message 'Invalid time zone: AM'.</i>"
+        <br>The solution is to uncheck <b>Auto-detect Schema</b> and choose "Edit as text" with the following query (example for steps_hours.csv file). In the Advanced options, type 1 at "Header Rows to Skip." Repeat the same steps with other files.
+        <img src="images/Sales.png" alt="" width="300" height="250" />
+    </li>
+    <li><b>Checking Data Consistency:</b>
+        <ul>
+            <li><b>METs_minutes:</b> 33 unique users</li>
+            <li><b>activities_day:</b> 33 unique users</li>
+            <li><b>calories_hours:</b> 33 unique users</li>
+            <li><b>heartrate_seconds:</b> 14 unique users</li>
+            <li><b>intensities_hours:</b> 33 unique users</li>
+            <li><b>sleeps_day:</b> 24 unique users</li>
+            <li><b>steps_hours:</b> 33 unique users</li>
+            <li><b>weight_day:</b> 8 unique users</li>
+        </ul>
+        From the results, there are 24 unique users in the sleeps_day dataset, 14 unique users in the heartrate_seconds dataset, and only 8 unique users in the weight_day dataset, while other datasets have 33 unique users. Hence, with only 8 & 14 unique users, sleeps_day & heartrate_seconds are not significant for gaining insights.
+    </li>
+</ul>
+
 
 
 	
