@@ -25,7 +25,7 @@ By using discovered trends to support guiding future marketing strategies. These
         The solution is to uncheck <b>Auto-detect Schema</b>, and choose Edit as text with the following query (example for steps_hours.csv file) and in Advanced options, type 1 at Header Rows to Skip. Repeat the same steps with other files.
     </li>
 </ul>
-<img src="images/13.png" alt="" width="500" height="400" />
+<img src="images/13.png" alt="" width="700" height="600" />
 <ul>
     <li>
         <b>Checking Data consistency:</b>
@@ -40,15 +40,20 @@ By using discovered trends to support guiding future marketing strategies. These
             <li>weight_day: 8 unique users</li>
         </ul>
         <i>From the results, there are 24 unique users in the sleeps_day dataset, 14 unique users in the heartrate_seconds dataset, and only 8 unique users in the weight_day dataset, while other datasets have 33 unique users. Hence, with only 8 & 14 unique users, sleeps_day & heartrate_seconds are not significant to gain insights.</i>
+
+	 <li>
+	<b>Checking for NULL Values in all columns:</b>To make sure there is no null value for next analysis, we run this code (<i>Apply for all datasets that are related to the analysis</i>:
+	<ul>
+	<img src="images/3.png" alt="" width="500" height="3500" />
+		
     </li>
 </ul>
 
 <h3>4. Process Phase - Google BigQuery</h3>
 <ul>
     <li><b>Activities_day</b> dataset</li>
-</ul>
 <ul>
-    <li>According to the reference from this article <a href="https://www.10000steps.org.au/articles/healthy-lifestyles/counting-steps/">(source)</a>, we classify the users as follows:</li>
+    <li>According to the reference from this article <a href="https://www.10000steps.org.au/articles/healthy-lifestyles/counting-steps/">(source:10000steps)</a>, we classify the users as follows:</li>
     <ul>
         <li>- Sedentary: Less than 5000 steps a day.</li>
         <li>- Low active: Between 5000 and 9999 steps a day.</li>
@@ -57,7 +62,7 @@ By using discovered trends to support guiding future marketing strategies. These
     </ul>
     <li>While other datasets have the date format ddmmyy, the activities_day has the yymmdd format, and we also insert the day_of_week column and week number.</li>
 </ul>
-<img src="images/2.png" alt="" width="500" height="400" />
+<img src="images/2.png" alt="" width="1000" height= "800" />
 
 
 <h3>3. Who uses these reports:</h3>
