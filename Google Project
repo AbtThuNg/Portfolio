@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project Details</title>
+</head>
+<body>
+	<h1>CASE STUDY: How Can a Wellness Technology Company Play It Smart?</h1>
+
+    <h3>1. About the company</h3>
+<p>Urška Sršen and Sando Mur founded Bellabeat, a high-tech company that manufactures health-focused smart products. 
+Sršen used her background as an artist to develop beautifully designed technology that informs and inspires women around the world. 
+Collecting data on activity, sleep, stress, and reproductive health has allowed Bellabeat to empower women with knowledge about their own health and habits.</p>
+
+    <h3>2. Business Task</h3>
+<p> As a data analyst, you have been asked to analyze smart devices in order to gain insight into trends of how consumers use non-Bellabeat smart devices.   
+By using discovered trends to support guiding future marketing strategies. These findings and the high-level recommendations will help to unlock new growth opportunities for the company, and are presented to the Bellabeat executive team.</p>
+
+    <h3>3. Analysis Introduction</h3>
+<p>The phases of answering this work followed Google’s six Data Analysis steps: Ask, Prepare, Process, Analyze, Share, and Act.</p>
+
+    <h2>Step 1 - ASK </h2>
+<p> There are two key tasks in this phase:
+- Identify the business task
+- Consider key stakeholders
+And these lead one deliverable: a clear statement of the business task.
+
+<table border="1">
+      
+        <tr>
+ <td>Identify the business task, 
+- To gain insight into trends of how consumers use non-Bellabeat smart devices.
+- How to apply discovered trends to Bellabeat customers as well as to support guiding future marketing strategies. 
+
+</td> 
+</tr>
+        <tr>
+           
+<td>Consider key stakeholders
+, The Executive team (Urška Sršen and Sando Mur), Marketing analytics team, and Customers.
+
+</td>
+</tr>
+
+      <tr>
+           
+<td> Deliverable
+, The Executive team (Urška Sršen and Sando Mur), Marketing analytics team, and Customers.
+
+</td>
+</tr>
+      
+    </table>
+
+
+<h3>2. Business Demand</h3>
+<p><strong>- Value of changes:</strong> Visual dashboards, improved Sales reports</p>
+<p><strong>- Tools:</strong> SQL, Tableau</p>
+
+<h3>3. Who uses these reports:</h3>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+    }
+</style>
+
+<table>
+    <tr>
+        <th>No.</th>
+        <th>Role</th>
+        <th>Demand</th>
+        <th>So that I (user value)</th>
+        <th>Acceptance Criteria</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Sales Manager</td>
+        <td>To have a visual dashboard of sales</td>
+        <td>To better track which stores have the best sales and which products are selling the most.</td>
+        <td>A Tableau dashboard that allows filtering of data to show stores with the highest sales and the best-selling products by each store.</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Store manager</td>
+        <td>A comprehensive overview of sales per product and per staff</td>
+        <td>To monitor staff performance and identify popular products sold by staff members. This helps with stock allocation and training plans.</td>
+        <td>A Tableau dashboard that enables filtering of data by store and staff.</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Sales representative</td>
+        <td>A detailed view of sales per product and per customer</td>
+        <td>To track customers with the highest purchases and identify popular products among customers.</td>
+        <td>A Tableau dashboard that allows filtering of data by product and customer.</td>
+    </tr>
+</table>
+
+<h3>4. Data Cleansing & Transformation</h3>
+<p>Below are SQL statements for cleansing & Transformation of necessary data that are requested by the Sales Manager.</p>
+<div style="margin-bottom: 40px;">
+    <a href="#" class="image fit">
+      <img src="images/Sales.png" alt="" width="300" height="250" />
+    </a>
+  </div>
+  
+  <div style="margin-bottom: 40px;">
+    <a href="#" class="image fit">
+      <img src="images/CS.png" alt="" width="400" height="270" />
+    </a>
+  </div>
+  
+  <div style="margin-bottom: 40px;">
+    <a href="#" class="image fit">
+      <img src="images/S1.png" alt="" width="300" height="150" />
+    </a>
+  </div>
+  
+  <div style="margin-bottom: 40px;">
+    <a href="#" class="image fit">
+      <img src="images/S2.png" alt="" width="300" height="150" />
+    </a>
+  </div>
+  
+  <div style="margin-bottom: 40px;">
+    <a href="#" class="image fit">
+      <img src="images/S3.png" alt="" width="300" height="150" />
+    </a>
+  </div>
+  
+  <div style="margin-bottom: 40px;">
+    <a href="#" class="image fit">
+      <img src="images/S4.png" alt="" width="300" height="150" />
+    </a>
+  </div>
+
+  <style>
+    /* Styles for the 3D button */
+    .button-3d {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+  
+    .button-3d:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+<h3>5. Interactive Sales Dashboard in Tableau </h3>
+<p>Explore the interactive sales dashboard in Tableau for a comprehensive view of the sales data by clicking the "View Dashboard" link below. </p>
+  <ul class="actions special">
+    <li>
+      <a href="https://public.tableau.com/app/profile/thu1336/viz/SalesAnalyticsaFashionretailcompany/Dashboard1?publish=yes" class="button button-3d">View Dashboard</a>
+    </li>
+  </ul>
+  
+  
+  </body>
+</html>
