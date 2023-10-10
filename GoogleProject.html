@@ -53,139 +53,62 @@ By using discovered trends to support guiding future marketing strategies. These
 
 <h3>4. Process Phase - Google BigQuery</h3>
 <ul>
-<li><b>Activities_day</b> dataset</li>
+  <li><b>Activities_day</b> dataset</li>
+  <ul>
+    <li>According to the reference from this article <a href="https://www.10000steps.org.au/articles/healthy-lifestyles/counting-steps/" target="_blank">(source: 10000steps)</a>, we classify the users as follows:</li>
     <ul>
-        <li>According to the reference from this article <a href="https://www.10000steps.org.au/articles/healthy-lifestyles/counting-steps/">(source: 10000steps)</a>, we classify the users as follows:</li>
-        <ul>
-            <li>- Sedentary: Less than 5000 steps a day.</li>
-            <li>- Low active: Between 5000 and 9999 steps a day.</li>
-            <li>- Fairly active: Between 10000 and 12500 steps a day.</li>
-            <li>- Very active: More than 12500 steps a day.</li>
-        </ul>
-        <li>While other datasets have the date format ddmmyy, the activities_day has the yymmdd format, and we also insert the day_of_week column and week number.</li>
+      <li>- Sedentary: Less than 5000 steps a day.</li>
+      <li>- Low active: Between 5000 and 9999 steps a day.</li>
+      <li>- Fairly active: Between 10000 and 12500 steps a day.</li>
+      <li>- Very active: More than 12500 steps a day.</li>
     </ul>
-    <img src="images/2.png" alt="" width="800" height="550" />
-	
-<li>Calculate the number of days per month (number_of_day_logged) that users logged in:.</li>
-<p> <b>Key finding:</b> The majority of users (21) logged in consistently for the entire month, indicating a highly engaged user segment. This high level of engagement suggests that a significant portion of users is committed to using the platform regularly. </p>
+    <li>While other datasets have the date format ddmmyy, the activities_day has the yymmdd format, and we also insert the day_of_week column and week number.</li>
+  </ul>
+  <img src="images/2.png" alt="" width="800" height="550" />
+  
+  <li>Calculate the number of days per month (number_of_day_logged) that users logged in:</li>
+  <p><b>Key finding:</b> The majority of users (21) logged in consistently for the entire month, indicating a highly engaged user segment. This high level of engagement suggests that a significant portion of users are committed to using the platform regularly.</p>
+  <p><b>Challenge:</b> The users who logged in for only half of the month (< 15 days) might indicate a retention challenge. Understanding why some users stop using the platform after a short period can help improve retention strategies.</p>
+  <img src="images/4.png" alt="" width="600" height="350" />
+  <img src="images/5.png" alt="" width="600" height="350" />
 </ul>
-<p> <b>Challenge:</b> The user who logged in for only half of month (< 15 days) might indicate a retention challenge. Understanding why some users stop using the platform after a short period can help improving retention strategies. </p>
-<img src="images/4.png" alt="" width="600" height="350" />
-<img src="images/5.png" alt="" width="600" height="350" />
 
 <li><b>Sleeps_day</b> dataset</li>
-	<ul>
-	<li>Format Sleepday column<li/>
-	<li>Crate columns hour_asleep & hour_inbed to convert the recorded in minutes into hour.<li/>
-	<li>To gain insights from this dataset, I created a column named sleep_level to segment users by their asleep hour per day, with “sleep < 6 hours”, “sleep 6-8 hours”, “sleep > 8 hours”</li>
-<img src="images/6.png" alt="" width="600" height="350" />
+<ul>
+  <li>Format Sleepday column</li>
+  <li>Create columns hour_asleep & hour_inbed to convert the recorded minutes into hours.</li>
+  <li>To gain insights from this dataset, I created a column named sleep_level to segment users by their asleep hours per day, with “sleep < 6 hours”, “sleep 6-8 hours”, “sleep > 8 hours”</li>
+  <img src="images/6.png" alt="" width="600" height="350" />
+</ul>
+
+<li><b>Calories_hours</b> dataset</li>
+<ul>
+<li>Format ActivityDate column</li>
+<li>Insert columns: day of week and week number</li>
+<img src="images/7.png" alt="" width="600" height="350" />
+</ul>
+
+<li><b>Activities_day</b> dataset & <b>Sleeps_day</b> dataset </li>
+<ul>
+<p> To analyze the relationship between sleep and activity level of users, I created a joint table.</p>
+<img src="images/8.png" alt="" width="600" height="350" />
+</ul>
+
+<li><b>Activities_day</b> dataset & <b>Calories_hours</b> dataset </li>
+<ul>
+<p> To analyze the relationship between Calories burned and activity level of users, I created a joint table.</p>
+<img src="images/9.png" alt="" width="600" height="350" />
 </ul>
 
 
-<h3>3. Who uses these reports:</h3>
-<style>
-    table {
-        border-collapse: collapse;
-    }
+<h3>5. Interactive Dashboard in Tableau </h3>
+<p> In this interactive dashboard, you have the flexibility to explore insights by filtering based on week number, day of the week, and activity level. This provides you with a comprehensive overview and allows you to recognize trends within the data easily.</p>
+<img src="images/10.png" alt="" width="600" height="350" />
+<p>Explore the interactive dashboard in Tableau for a comprehensive view of users insights by clicking the "View Dashboard" link below. </p>
 
-    th, td {
-        border: 1px solid black;
-        padding: 8px;
-    }
-</style>
-
-<table>
-    <tr>
-        <th>No.</th>
-        <th>Role</th>
-        <th>Demand</th>
-        <th>So that I (user value)</th>
-        <th>Acceptance Criteria</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Sales Manager</td>
-        <td>To have a visual dashboard of sales</td>
-        <td>To better track which stores have the best sales and which products are selling the most.</td>
-        <td>A Tableau dashboard that allows filtering of data to show stores with the highest sales and the best-selling products by each store.</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Store manager</td>
-        <td>A comprehensive overview of sales per product and per staff</td>
-        <td>To monitor staff performance and identify popular products sold by staff members. This helps with stock allocation and training plans.</td>
-        <td>A Tableau dashboard that enables filtering of data by store and staff.</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>Sales representative</td>
-        <td>A detailed view of sales per product and per customer</td>
-        <td>To track customers with the highest purchases and identify popular products among customers.</td>
-        <td>A Tableau dashboard that allows filtering of data by product and customer.</td>
-    </tr>
-</table>
-
-<h3>4. Data Cleansing & Transformation</h3>
-<p>Below are SQL statements for cleansing & Transformation of necessary data that are requested by the Sales Manager.</p>
-<div style="margin-bottom: 40px;">
-    <a href="#" class="image fit">
-      <img src="images/Sales.png" alt="" width="300" height="250" />
-    </a>
-  </div>
-  
-  <div style="margin-bottom: 40px;">
-    <a href="#" class="image fit">
-      <img src="images/CS.png" alt="" width="400" height="270" />
-    </a>
-  </div>
-  
-  <div style="margin-bottom: 40px;">
-    <a href="#" class="image fit">
-      <img src="images/S1.png" alt="" width="300" height="150" />
-    </a>
-  </div>
-  
-  <div style="margin-bottom: 40px;">
-    <a href="#" class="image fit">
-      <img src="images/S2.png" alt="" width="300" height="150" />
-    </a>
-  </div>
-  
-  <div style="margin-bottom: 40px;">
-    <a href="#" class="image fit">
-      <img src="images/S3.png" alt="" width="300" height="150" />
-    </a>
-  </div>
-  
-  <div style="margin-bottom: 40px;">
-    <a href="#" class="image fit">
-      <img src="images/S4.png" alt="" width="300" height="150" />
-    </a>
-  </div>
-
-  <style>
-    /* Styles for the 3D button */
-    .button-3d {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-      text-decoration: none;
-      transition: transform 0.3s;
-    }
-  
-    .button-3d:hover {
-      transform: translateY(-2px);
-    }
-  </style>
-<h3>5. Interactive Sales Dashboard in Tableau </h3>
-<p>Explore the interactive sales dashboard in Tableau for a comprehensive view of the sales data by clicking the "View Dashboard" link below. </p>
   <ul class="actions special">
     <li>
-      <a href="https://public.tableau.com/app/profile/thu1336/viz/SalesAnalyticsaFashionretailcompany/Dashboard1?publish=yes" class="button button-3d">View Dashboard</a>
+      <a href="https://public.tableau.com/app/profile/thu1336/viz/GoogleCaseStudy_16969482853230/Dashboard1" class="button button-3d">View Dashboard</a>
     </li>
   </ul>
   
